@@ -1,8 +1,11 @@
 import NavBarHeader from "../components/NavBarHeader";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 import "../index.css";
 
 export default function Index() {
+  const navigate = useNavigate();
+
   return (
     <>
       <NavBarHeader />
@@ -19,7 +22,7 @@ export default function Index() {
             Un espacio para reconectar con la naturaleza.
           </p>
 
-          <button className="btn-primary">
+          <button className="btn-primary" onClick={() => navigate("/reservas")}>
             Reserva un taller
           </button>
         </div>
